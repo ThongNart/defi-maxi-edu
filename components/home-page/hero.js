@@ -1,4 +1,4 @@
-import classes from '@/components/post-components/hero.module.css'
+import classes from '@/components/home-page/hero.module.css'
 import Image from 'next/image';
 
 function Hero(){
