@@ -1,9 +1,10 @@
+import PostContent from "@/components/post-components/post-detail/post-content";
 import { Fragment } from "react";
 
 function PostDetailPage(){
     return(
         <Fragment>
-            <h1>Post Detail Page</h1>
+            <PostContent/>
         </Fragment>
     )
 }
