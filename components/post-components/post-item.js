@@ -13,12 +13,16 @@ function PostItem(props){
         year:'numeric'
     })
 
+    const imageStyle = {
+        width: 'auto',
+        height: 'auto'
+    }
 
     return (
         <li className={classes.post}>
             <Link href={`/posts/${slug}`}>
                 <div className={classes.image}>
-                    <Image src={imagePath} alt={title} width={300} height={250} layout="responsive"/>
+                    <Image src={imagePath} alt={title} width={300} height={250} style={imageStyle}/>
                 </div>
                 <div className={classes.content}>
                     <h3>{title}</h3>

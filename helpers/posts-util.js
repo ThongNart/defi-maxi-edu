@@ -23,6 +23,23 @@ export function getPostData(fileName) {
     return postData
 }
 
+export function getServerCodes() {
+
+    const filePath = path.join(process.cwd(), 'content/posts/how-to-defi-1.md') // get the current file path of the server
+     
+    const fileContent = fs.readFileSync(filePath,'utf-8') // return the content of the file (text file, or markdown file)
+
+    const detailsData = matter(fileContent) // an object contain the meta data and the content of the markdown file
+
+    const postFiles = fs.readdirSync(postDirectory) // a list of all md file names
+
+    const allPosts = postFiles.map( post => {
+        return getPostData(post)
+    })
+    
+    return allPosts
+}
+
 export function getAllPosts() {
     const postFiles = fs.readdirSync(postDirectory);
 

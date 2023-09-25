@@ -9,7 +9,7 @@ function PostsGrid(props){
             
                 {
                     postData.map ( post =>( 
-                        <PostItem 
+                        <PostItem key={post.slug}
                             postDetail={post}
                         
                         />
